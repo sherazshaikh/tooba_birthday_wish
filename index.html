@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Happy Birthday ❤️</title>
+
+<!-- Google Fonts: Playfair Display for elegant headlines, Jost for clean body text -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================= -->
+<!-- PROGRESS BAR -->
+<!-- ============================================= -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ============================================= -->
+<!-- FLOATING NAVIGATION -->
+<!-- ============================================= -->
+<nav class="floating-nav" id="floatingNav">
+  <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="#home" data-label="Home">Home</a>
+    <a href="#memories" data-label="Memories">Memories</a>
+    <a href="#timeline" data-label="Timeline">Timeline</a>
+    <a href="#reasons" data-label="Reasons">Reasons</a>
+    <a href="#secret" data-label="Secret">Secret</a>
+    <a href="#final" data-label="Final">Final</a>
+  </div>
+</nav>
+
+<!-- ============================================= -->
+<!-- MUSIC BUTTON -->
+<!-- ============================================= -->
+<button class="music-btn" id="musicBtn">
+  <span class="music-icon">🎵</span>
+  <span class="music-label" id="musicLabel">Music</span>
+</button>
+
+<!-- ============================================= -->
+<!-- 1. OPENING / INTRO SCREEN -->
+<!-- ============================================= -->
+<section class="intro-screen" id="introScreen">
+  <div class="stars" id="introStars"></div>
+  <div class="intro-content">
+    <p class="intro-typing" id="introTyping"></p>
+    <p class="intro-sub" id="introSub"></p>
+    <button class="btn-glow" id="openSurpriseBtn">
+      <span>Open Your Surprise</span>
+      <span class="sparkle">✨</span>
+    </button>
+  </div>
+  <div class="heart-burst" id="heartBurst"></div>
+</section>
+
+<!-- ============================================= -->
+<!-- MAIN EXPERIENCE (hidden until intro opens) -->
+<!-- ============================================= -->
+<main class="experience" id="experience">
+
+  <!-- 2. BIRTHDAY REVEAL -->
+  <section class="section reveal-section" id="home">
+    <div class="petals-layer" id="petalsHome"></div>
+    <div class="reveal-content">
+      <p class="eyebrow-soft">today is all about you</p>
+      <h1 class="reveal-title">Happy Birthday, <span class="her-name" id="herName1">Love</span> <span class="heart-inline">❤️</span></h1>
+
+      <div class="cake-wrap" id="cakeWrap">
+        <div class="cake">
+          <div class="candle-row">
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+          </div>
+          <div class="cake-top"></div>
+          <div class="cake-middle"></div>
+          <div class="cake-drip"></div>
+          <div class="cake-base"></div>
+          <div class="cake-plate"></div>
+        </div>
+      </div>
+
+      <button class="btn-outline" id="wishBtn">Make a Wish <span>✨</span></button>
+      <p class="wish-message" id="wishMessage">Wish made? Then let's make this day special. ❤️</p>
+    </div>
+    <div class="scroll-hint">scroll to continue</div>
+  </section>
+
+  <!-- 3. MEMORY GALLERY -->
+  <section class="section gallery-section" id="memories">
+    <p class="eyebrow-soft">our little memories</p>
+    <h2 class="section-title">Our Little Memories 📸</h2>
+    <p class="section-sub">A few of my favorite moments with you.</p>
+
+    <div class="upload-wrap">
+      <label for="photoUpload" class="upload-label">
+        <span class="upload-icon">＋</span>
+        <span>Add your own photos</span>
+      </label>
+      <input type="file" id="photoUpload" accept="image/*" multiple hidden>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Polaroid cards injected here by script.js from the `memories` array -->
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev">&#10094;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Memory">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext">&#10095;</button>
+  </div>
+
+  <!-- 4. MEMORY TIMELINE -->
+  <section class="section timeline-section" id="timeline">
+    <p class="eyebrow-soft">looking back</p>
+    <h2 class="section-title">A Few Moments I Want To Remember ❤️</h2>
+
+    <div class="timeline" id="timelineList">
+      <!-- Timeline items injected by script.js from the `timelineData` array -->
+    </div>
+  </section>
+
+  <!-- 5. WHY YOU ARE SPECIAL -->
+  <section class="section reasons-section" id="reasons">
+    <div class="reasons-intro" id="reasonsIntro">
+      <p class="eyebrow-soft">a little secret</p>
+      <h2 class="section-title">Want to know something?</h2>
+      <button class="btn-outline" id="reasonsBtn">Click to find out <span>❤️</span></button>
+    </div>
+
+    <div class="reasons-grid" id="reasonsGrid">
+      <!-- Reason cards injected by script.js from the `reasonsData` array -->
+    </div>
+  </section>
+
+  <!-- 6. INTERACTIVE HEART -->
+  <section class="section heart-section" id="heartSection">
+    <p class="eyebrow-soft" id="heartLabel">Tap the heart</p>
+    <div class="big-heart-wrap">
+      <div class="big-heart" id="bigHeart">❤️</div>
+      <div class="heart-particles" id="heartParticles"></div>
+    </div>
+    <p class="heart-counter"><span id="heartCount">0</span> taps</p>
+    <p class="heart-final-message" id="heartFinalMessage">Okay... I think you've already figured out how much you mean to me. ❤️</p>
+  </section>
+
+  <!-- 7. DEVELOPER EASTER EGG -->
+  <section class="section terminal-section">
+    <div class="terminal" id="terminal">
+      <div class="terminal-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="terminal-title">birthday.exe</span>
+      </div>
+      <div class="terminal-body" id="terminalBody"></div>
+    </div>
+  </section>
+
+  <!-- 8. SECRET MESSAGE -->
+  <section class="section secret-section" id="secret">
+    <div class="secret-lock" id="secretLock">
+      <p class="eyebrow-soft">🔐</p>
+      <h2 class="section-title">There's one more thing...</h2>
+      <form class="secret-form" id="secretForm">
+        <input type="password" id="secretInput" placeholder="Enter the secret code" autocomplete="off">
+        <button type="submit" class="btn-outline">Unlock</button>
+      </form>
+      <p class="secret-error" id="secretError">That's not quite it... try again ❤️</p>
+    </div>
+
+    <div class="secret-letter" id="secretLetter">
+      <p class="eyebrow-soft">a little message for you</p>
+      <div class="letter-card">
+        <p class="letter-text" id="letterText"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FINAL SCENE -->
+  <section class="section final-section" id="final">
+    <div class="stars" id="finalStars"></div>
+    <div class="final-content">
+      <h2 class="final-title">"<span class="her-name" id="herName2">Love</span>", Happy Birthday <span class="heart-inline">❤️</span></h2>
+      <p class="final-text">May this year bring you countless beautiful moments, reasons to smile, and everything you've been wishing for.</p>
+      <div class="final-photo" id="finalPhoto"></div>
+      <p class="final-signature">Made with ❤️ by your favorite developer.</p>
+      <p class="final-code">&lt;made_with_love /&gt;</p>
+    </div>
+  </section>
+
+</main>
+
+<audio id="bgMusic" loop preload="none">
+  <source src="audio/birthday-song.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
