@@ -161,7 +161,7 @@
   }
   
   .heart-inline {
-    display: inline-block;
+    /* display: inline-block; */
     animation: pulse-heart 1.6s ease-in-out infinite;
   }
   
@@ -516,7 +516,7 @@
     overflow: hidden;
   }
   
-  .reveal-content { position: relative; z-index: 2; max-width: 640px; }
+  .reveal-content { position: relative; z-index: 2; max-width: 640px; margin-top: 5px; }
   
   .reveal-title {
     font-family: var(--font-display);
@@ -525,6 +525,7 @@
     color: var(--wine);
     margin: 0.4rem 0 2.5rem;
     line-height: 1.25;
+    margin-bottom: 60px;
   }
   
   /* Cake */

@@ -10,7 +10,7 @@
 const herName = "Tooba"; // e.g. "Sarah"
 
 // Secret code for the locked section
-const secretCode = "Janeman";
+const secretCode = "janeman";
 
 // The personal message revealed after the correct code is entered.
 // Use \n\n for paragraph breaks.
@@ -24,19 +24,34 @@ const secretMessage =
 // Replace `image` with your own file paths, e.g. "images/photo1.jpg"
 // Captions are optional — leave as "" if you don't want one.
 const memories = [
-  { image: "images/photo1.jpg", caption: "A beautiful memory ❤️" },
-  { image: "images/photo2.jpg", caption: "That day at the beach" },
-  { image: "images/photo3.jpg", caption: "Your favorite coffee shop" },
-  { image: "images/photo4.jpg", caption: "" },
+  { image: "images/photo1.jpeg", caption: "That look... and somehow you still manage to look effortlessly beautiful. ❤️" },
+
+  { image: "images/photo2.jpg", caption: "Elegance looks a little different when it's you. ✨❤️" },
+
+  { image: "images/photo3.jpeg", caption: "That little flower suits you almost as much as your smile does. 🌸❤️" },
+
+  { image: "images/photo4.jpg", caption: "You really do have a way of looking beautiful without even trying. ❤️" },
+
+  { image: "images/photo5.jpg", caption: "Those eyes... I could honestly keep looking at them forever. 👀❤️" },
+
+  { image: "images/photo6.jpg", caption: "Traditional, beautiful, and completely you. ❤️✨" },
+
+  { image: "images/photo7.jpg", caption: "There’s just something about your smile that makes every picture better. 🌸❤️" },
+
+  { image: "images/photo8.jpg", caption: "Even those glasses can't hide how pretty you are. 🤍❤️" },
+
+  { image: "images/photo9.jpg", caption: "You look beautiful in every style, but this one has my heart. ❤️✨" },
+
+  { image: "images/photo10.jpg", caption: "One picture, a thousand reasons to admire you. ❤️" },
 ];
 
 // Timeline of moments — edit freely, add/remove as many as you like
 const timelineData = [
-  { date: "The Beginning", title: "Our First Conversation", text: "I still remember exactly how it started." },
-  { date: "Not long after", title: "A Special Moment", text: "The moment I knew you were someone different." },
-  { date: "Since then", title: "The Moments That Made Me Smile", text: "So many little memories, all worth keeping." },
-  { date: "Today", title: "Today", text: "Another year of you, and I couldn't be happier." },
-  { date: "Always", title: "What Comes Next...", text: "I can't wait to find out, with you." },
+  { date: "Day One", title: "When We First Met", text: "Jab maine tujhe dekha, mujhe tujh se mohabbat ho gayi." },
+  { date: "Week 1", title: "Falling Fast", text: "It didn't take long for me to know you were different from everyone else." },
+  { date: "The Proposal", title: "You Said Yes ❤️", text: "One of the best moments of my life — the day you agreed to be mine forever." },
+  { date: "These 2 Months", title: "Short Time, Deep Love", text: "It's only been two months, but it feels like I've known you my whole life." },
+  { date: "Always", title: "What Comes Next...", text: "Engaged now, married soon, and forever after that — with you." },
 ];
 
 // "Why you are special" cards
@@ -50,7 +65,7 @@ const reasonsData = [
 ];
 
 // Final section photo (optional) — leave empty string "" to hide it
-const finalPhoto = ""; // e.g. "images/final.jpg"
+const finalPhoto = "images/final.png"; // e.g. "images/final.jpg"
 
 // Path to your background music file
 const musicPath = "audio/birthday-song.mp3";
